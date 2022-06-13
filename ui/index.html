@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice app Ui</title>
     <!-- css -->
-    
+
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="layout_wrapper">
         <aside class="side_bar">
@@ -27,9 +30,141 @@
         </aside>
         <main class="main-wrapper">
             <div class="main-container">
-                sda
+                <!-- Header-->
+                <div class="header">
+                    <div class="header-title">
+                        <h1>Invoice</h1>
+                        <p>There are 7 total invoices</p>
+                    </div>
+                    <div class="filter-dropdown d-none">
+                        filter by status
+                    </div>
+                    <div class="add-new-button">
+                        <button class="btn btn-addnew"><img src="./images/icon-plus.svg" alt=""> New Invoice</button>
+                    </div>
+                </div>
+                <!-- Header-->
+                <div class="InvoiceList_Wrapper">
+                    <a href="#" class="InvoiceItem">
+                        <h3><span>#</span>RT3080</h3>
+                        <div class="InvoiceItem_due">
+                            Due 19 Aug 2021
+                        </div>
+                        <div class="InvoiceItem_client">
+                            Jensen Huang
+                        </div>
+                        <div class="InvoiceItem_total">
+                            £1,800.9
+                        </div>
+                        <div class="InvoiceItem_status paid">
+                            <div class="InvoiceStatus_circle"></div>
+                            <div class="InvoiceStatus_text">
+                                Pending
+                            </div>
+                        </div>
+                        <div class="InvoiceItem_arrow">
+                            <img src="./images/icon-arrow-right.svg" alt="">
+                        </div>
+                    </a>
+
+                    <a href="#" class="InvoiceItem">
+                        <h3><span>#</span>RT3080</h3>
+                        <div class="InvoiceItem_due">
+                            Due 19 Aug 2021
+                        </div>
+                        <div class="InvoiceItem_client">
+                            Jensen Huang
+                        </div>
+                        <div class="InvoiceItem_total">
+                            £1,800.9
+                        </div>
+                        <div class="InvoiceItem_status pending">
+                            <div class="InvoiceStatus_circle"></div>
+                            <div class="InvoiceStatus_text">
+                                Pending
+                            </div>
+                        </div>
+                        <div class="InvoiceItem_arrow">
+                            <img src="./images/icon-arrow-right.svg" alt="">
+                        </div>
+                    </a>
+
+                    <a href="#" class="InvoiceItem">
+                        <h3><span>#</span>RT3080</h3>
+                        <div class="InvoiceItem_due">
+                            Due 19 Aug 2021
+                        </div>
+                        <div class="InvoiceItem_client">
+                            Jensen Huang
+                        </div>
+                        <div class="InvoiceItem_total">
+                            £1,800.9
+                        </div>
+                        <div class="InvoiceItem_status draft">
+                            <div class="InvoiceStatus_circle"></div>
+                            <div class="InvoiceStatus_text">
+                                Pending
+                            </div>
+                        </div>
+                        <div class="InvoiceItem_arrow">
+                            <img src="./images/icon-arrow-right.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- invoice page -->
+                <div>
+                    <a href="#" class="btn-goback"> <img src="./images/icon-arrow-left.svg" alt="">Go Back</a>
+                    <div class="Invoice_header">
+                        <span>Status</span>
+                        <div class="InvoiceItem_status draft">
+                            <div class="InvoiceStatus_circle"></div>
+                            <div class="InvoiceStatus_text">
+                                Pending
+                            </div>
+                        </div>
+                        <div class="Invoice_header_buttons">
+                            <button class="btn btn-edit">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-mark">Mark as Paid</button>
+                        </div>
+                    </div>
+                    <div class="InvoiceBody_Wrapper">
+                        <div>
+                            <h1 class="head"><span>#</span>TY9141</h1>
+                            <span>Landing Page Design</span>
+                        </div>
+                        <div>
+
+                        </div>
+                        <address class="sender_address">
+                            <span>19 Union Terrace</span>
+                            <span>London</span>
+                            <span>E1 3EZ</span>
+                            <span> Kingdom</span>
+                        </address>
+                        <div>
+                            <span>Invoice Date</span>
+                            <h1 class="head">01 Oct 2021</h1>
+                        </div>
+                        <div>
+                            <span>Bill To</span>
+                            <h1 class="head">Thomas Wayne</h1>
+                        </div>
+                        <div>
+                            <span>Sent to</span>
+                            <h1 class="head">thomas@dc.com</h1>
+                        </div>
+
+                        <div>
+                            <span>Payment Due</span>
+                            <h1 class="head">31 Oct 2021</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
-    </div>  
+    </div>
 </body>
+
 </html>
