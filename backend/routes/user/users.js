@@ -22,9 +22,14 @@ async function sessionSaveOrUpdate(user_id,token){
     return knex('session_store').where({id:user_id}).update({token:token});
 }
 
+async function validateUser(cookies){
+    console.log(cookies)
+}
+
 module.exports = {
     fetchUsers,
     userCheck,
     genRandomToken,
-    sessionSaveOrUpdate
+    sessionSaveOrUpdate,
+    validateUser
 }

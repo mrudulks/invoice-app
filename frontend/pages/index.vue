@@ -32,7 +32,7 @@ import InvoiceList from '../components/InvoiceList.vue'
     },
     methods:{
        async fetchInvoice(){
-           var res = await fetch('http://localhost:3000/invoice');
+           var res = await fetch('/api/user/me');
            this.InvoiceItems = await res.json()
            console.log(res)
         }

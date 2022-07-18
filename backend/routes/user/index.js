@@ -24,9 +24,11 @@ module.exports = async function (fastify, opts) {
     reply.header('set-cookie',`token=${token};/api`).code(200).send({message:"Login Success"})
   });
 
-  // User Profile 
+  // User Profile Check already loggedin
 
   fastify.get('/me', async function(request, reply){
+    const cookies = request.headers.cookie;
+    const validateUser =  api.validateUser(cookies)
     return "User is me"
   });
 
