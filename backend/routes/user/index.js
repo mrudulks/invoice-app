@@ -1,10 +1,17 @@
 'use strict'
 
-const api = require('./users')
-const { loginSchema } = require('./schema')
+const api = require('./users');
+const { loginSchema } = require('./schema');
 module.exports = async function (fastify, opts) {
+  //user
+  fastify.get('/', async function( request, reply ){
+    const data = await api.fetchUsers();
+    console.log(data);
+    reply.send({ data:data })
+  })
 
   // Authentication Api 
+
 
   fastify.post('/auth', async function (request, reply) {
     let body = request.body;
@@ -35,6 +42,7 @@ module.exports = async function (fastify, opts) {
   // New User Register
 
   fastify.post('/register', async function (request, reply) {
-    reply.send({root:"New"})
+    console.log(request.body)
+    reply.send({message:"hello guys"})
   })
 }
